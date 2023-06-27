@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <title>PRODUCTS SYSTEM</title>
+
+    <!-- FontAwesome CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="products-container">
+        <h1 class="title">Products System</h1>
+        <label for="inputName" class="input-title">Product Name:</label>
+        <input id="inputName" type="text" class="input" />
+        <div class="alert" id="alertName">
+          This Name Is Not Valid<br />Example: Panasonic
+        </div>
+        <label for="inputPrice" class="input-title">Product Price:</label>
+        <input id="inputPrice" type="number" class="input" />
+        <div id="alertPrice" class="alert">
+          This Price Is Not Valid<br />Example: 1000
+        </div>
+        <label for="inputCategory" class="input-title">Product Category:</label>
+        <select id="inputCategory" class="input">
+          <option value="MOBILE">MOBILE</option>
+          <option value="TV" selected>TV</option>
+          <option value="LAPTOB">LAPTOP</option>
+        </select>
+
+        <div id="alertCategory" class="alert">You Should Select Any Value</div>
+        <label for="inputCondition" class="input-title"
+          >Product Condition:</label
+        >
+        <select id="inputCondition" class="input">
+          <option class="bg-green" value="Excellent">Excellent</option>
+          <option class="bg-yellow" value="Good" selected>Good</option>
+          <option class="bg-red" value="Bad">Bad</option>
+        </select>
+        <div id="alertCondition" class="alert">You Should Select Any Value</div>
+        <div class="button">
+          <button id="addBtn" class="btn-1">Add Product</button>
+          <button id="clearBtn" class="btn-2">Clear Form</button>
+        </div>
+
+        <input
+          type="search"
+          id="inputSearch"
+          class="search"
+          placeholder="Search The Products"
+        />
+      </form>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Condition</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr class="tab">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- custom js -->
+    <script src="/script.js"></script>
+  </body>
+</html>
